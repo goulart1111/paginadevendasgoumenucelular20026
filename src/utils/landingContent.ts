@@ -11,38 +11,44 @@ export type Feature = {
 export const features: Feature[] = [
   {
     id: "mobile",
-    title: "Controle no bolso",
-    description: "Abre, navega e executa ações pelo celular, com sensação de app nativo e resposta rápida.",
+    title: "Android e iOS",
+    description:
+      "Funciona pelo celular em Android e iPhone, independente da marca ou modelo, usando um fluxo simples e direto.",
     Icon: Smartphone,
   },
   {
-    id: "stability",
-    title: "Fluxo estável",
-    description: "Projeto pensado para uso real: reconexão, feedback visual e rotina de setup clara.",
+    id: "screening",
+    title: "Menos exposição",
+    description:
+      "Pensado para um uso discreto em verificações visuais, telagens manuais e conferências de tela.",
     Icon: Shield,
   },
   {
-    id: "latency",
-    title: "Baixa fricção",
-    description: "Menos cliques, mais ação: atalhos, presets e uma interface que prioriza o óbvio.",
+    id: "risk",
+    title: "Risco reduzido",
+    description:
+      "Fluxo feito para reduzir exposição e evitar instalações suspeitas no PC, diminuindo chances de punição.",
     Icon: Zap,
   },
   {
-    id: "tactical",
-    title: "UI tática",
-    description: "Visual “Noir Neon” com microinterações e animações elegantes, sem poluição.",
+    id: "pvp",
+    title: "Feito para PvP",
+    description:
+      "Ideal para quem gosta de trocar tiro no FiveM, jogar ação, PvP e situações que exigem resposta rápida.",
     Icon: Sparkles,
   },
   {
-    id: "performance",
-    title: "Leve no PC",
-    description: "Construído com foco em performance e praticidade para não atrapalhar sua gameplay.",
+    id: "pc",
+    title: "Nada pesado no PC",
+    description:
+      "Você não baixa arquivos de xit no computador: o controle fica concentrado no celular, com operação prática.",
     Icon: Cpu,
   },
   {
-    id: "support",
-    title: "Suporte e updates",
-    description: "Acompanhamento para setup + evolução contínua conforme mudanças do FiveM.",
+    id: "cities",
+    title: "Todas as cidades",
+    description:
+      "Projetado para funcionar em servidores e cidades do FiveM, mantendo o uso simples em diferentes ambientes.",
     Icon: Headphones,
   },
 ];
@@ -125,7 +131,7 @@ export const faqItems: FAQItem[] = [
     id: "risk",
     question: "Tem risco de ban?",
     answer:
-      "Qualquer uso de menu pode envolver riscos, dependendo do servidor, regras e comportamento do anticheat. A landing page existe para te orientar e reduzir o uso incorreto, mas não existe “risco zero”.",
+      "Qualquer uso de menu pode envolver riscos, dependendo do servidor, regras e comportamento do anticheat. A landing page existe para te orientar e reduzir o uso incorreto, mas não existe risco zero.",
   },
   {
     id: "mobile",
@@ -158,4 +164,3 @@ export const compatibilityBadges = [
   { id: "mobile", label: "Celular", Icon: Smartphone },
   { id: "low", label: "Leve", Icon: Zap },
 ] as const;
-
