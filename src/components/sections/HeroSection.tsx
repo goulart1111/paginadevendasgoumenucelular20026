@@ -28,10 +28,7 @@ export default function HeroSection({ checkoutHref, supportHref, videoSrc, video
               data-reveal
               className="mt-6 font-display text-4xl font-semibold leading-[1.05] tracking-tight text-white md:text-6xl"
             >
-              Use o menu do FiveM
-              <span className="block bg-[linear-gradient(90deg,rgba(34,211,238,0.95),rgba(255,255,255,0.92),rgba(245,158,11,0.75))] bg-clip-text text-transparent">
-                direto do celular
-              </span>
+              O melhor método para xitar no FiveM
             </h1>
 
             <p data-reveal className="mt-6 max-w-xl text-sm leading-relaxed text-white/70 md:text-base">
