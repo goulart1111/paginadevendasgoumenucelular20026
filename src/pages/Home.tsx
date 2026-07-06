@@ -1,4 +1,3 @@
-import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import SiteShell from "@/components/SiteShell";
 import ContactSection from "@/components/sections/ContactSection";
@@ -34,7 +33,6 @@ export default function Home() {
           ]}
         />
       }
-      footer={<SiteFooter checkoutHref={checkoutHref} supportHref={supportHref} />}
     >
       <HeroSection checkoutHref={checkoutHref} supportHref={supportHref} videoSrc={vslSrc} videoPoster={vslPoster} />
       <FeaturesSection />
