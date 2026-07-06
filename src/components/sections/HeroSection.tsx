@@ -1,6 +1,5 @@
 import { ArrowRight, ShieldCheck, Zap } from "lucide-react";
 import { ButtonLink } from "@/components/Button";
-import PhoneMock from "@/components/PhoneMock";
 import VideoPlayer from "@/components/VideoPlayer";
 
 type HeroSectionProps = {
@@ -28,12 +27,14 @@ export default function HeroSection({ checkoutHref, supportHref, videoSrc, video
               data-reveal
               className="mt-6 font-display text-4xl font-semibold leading-[1.05] tracking-tight text-white md:text-6xl"
             >
-              O melhor método para xitar no FiveM
+              O melhor método para
+              <span className="block bg-[linear-gradient(90deg,rgba(34,211,238,0.95),rgba(255,255,255,0.92),rgba(14,165,233,0.85))] bg-clip-text text-transparent">
+                xitar no FiveM
+              </span>
             </h1>
 
             <p data-reveal className="mt-6 max-w-xl text-sm leading-relaxed text-white/70 md:text-base">
-              Remote control pensado para ser rápido, intuitivo e bonito. Menos fricção, mais controle — com suporte e setup
-              guiado.
+              Remote control pensado para ser rápido, legit, simples e funcional - a melhor forma de passar despercebido.
             </p>
 
             <div data-reveal className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -72,13 +73,8 @@ export default function HeroSection({ checkoutHref, supportHref, videoSrc, video
               {videoSrc ? (
                 <div className="grid gap-4">
                   <VideoPlayer src={videoSrc} poster={videoPoster} title="VSL" />
-                  <div className="hidden md:block">
-                    <PhoneMock />
-                  </div>
                 </div>
-              ) : (
-                <PhoneMock />
-              )}
+              ) : null}
             </div>
           </div>
         </div>
