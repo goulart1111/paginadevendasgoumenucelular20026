@@ -25,3 +25,5 @@ videos-originais/
 *.njsproj
 *.sln
 *.sw?
+
+.vercel
