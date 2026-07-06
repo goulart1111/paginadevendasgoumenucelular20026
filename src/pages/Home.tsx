@@ -1,7 +1,6 @@
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import SiteShell from "@/components/SiteShell";
-import CompatibilitySection from "@/components/sections/CompatibilitySection";
 import ContactSection from "@/components/sections/ContactSection";
 import FAQSection from "@/components/sections/FAQSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
@@ -29,8 +28,8 @@ export default function Home() {
           supportHref={supportHref}
           items={[
             { label: "Benefícios", href: "#beneficios" },
+            { label: "Feedbacks", href: "#prova" },
             { label: "Como funciona", href: "#como-funciona" },
-            { label: "Compatibilidade", href: "#compatibilidade" },
             { label: "Preços", href: "#precos" },
             { label: "FAQ", href: "#faq" },
             { label: "Contato", href: "#contato" },
@@ -41,10 +40,9 @@ export default function Home() {
     >
       <HeroSection checkoutHref={checkoutHref} supportHref={supportHref} videoSrc={vslSrc} videoPoster={vslPoster} />
       <FeaturesSection />
-      <HowItWorksSection />
-      <CompatibilitySection />
-      <PricingSection />
       <TestimonialsSection />
+      <HowItWorksSection />
+      <PricingSection />
       <FAQSection />
       <ContactSection
         checkoutHref={checkoutHref}
