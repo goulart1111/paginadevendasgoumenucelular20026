@@ -18,16 +18,16 @@ export const features: Feature[] = [
   },
   {
     id: "screening",
-    title: "Menos exposição",
+    title: "Passando em telagem",
     description:
-      "Pensado para um uso discreto em verificações visuais, telagens manuais e conferências de tela.",
+      "Passando tanto em telagem manual quanto em telagem com scanner, sem deixar aquele rastro suspeito no PC.",
     Icon: Shield,
   },
   {
     id: "risk",
-    title: "Risco reduzido",
+    title: "Não dá ban",
     description:
-      "Fluxo feito para reduzir exposição e evitar instalações suspeitas no PC, diminuindo chances de punição.",
+      "Não dá ban global, ban em cidade ou qualquer outro tipo de ban por arquivo baixado no computador.",
     Icon: Zap,
   },
   {
@@ -46,9 +46,9 @@ export const features: Feature[] = [
   },
   {
     id: "cities",
-    title: "Todas as cidades",
+    title: "Funciona em todas as cidades",
     description:
-      "Projetado para funcionar em servidores e cidades do FiveM, mantendo o uso simples em diferentes ambientes.",
+      "Funciona em todas as cidades do FiveM, então você usa o mesmo método sem ficar preso em servidor específico.",
     Icon: Headphones,
   },
 ];
