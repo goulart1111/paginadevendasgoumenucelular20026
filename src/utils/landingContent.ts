@@ -66,48 +66,6 @@ export const howSteps: HowStep[] = [
   { id: "refine", title: "Ajusta e salva", description: "Configura presets e atalhos para acelerar ações do dia a dia." },
 ];
 
-export type PricingPlan = {
-  id: string;
-  name: string;
-  price: string;
-  note: string;
-  highlighted?: boolean;
-  includes: string[];
-  ctaLabel: string;
-  ctaHref: string;
-};
-
-export const pricingPlans: PricingPlan[] = [
-  {
-    id: "basic",
-    name: "Start",
-    price: "R$ 0,00",
-    note: "Apresentação / demo",
-    includes: ["Visão geral do método", "FAQ e compatibilidade", "Contato direto no suporte"],
-    ctaLabel: "Falar no suporte",
-    ctaHref: "#contato",
-  },
-  {
-    id: "pro",
-    name: "Pro",
-    price: "A combinar",
-    note: "Plano mais vendido",
-    highlighted: true,
-    includes: ["Acesso ao método", "Guia de setup", "Updates e otimizações", "Suporte para instalação"],
-    ctaLabel: "Comprar agora",
-    ctaHref: "#contato",
-  },
-  {
-    id: "reseller",
-    name: "Revenda",
-    price: "A combinar",
-    note: "Para comunidades",
-    includes: ["Condições para revenda", "Onboarding dedicado", "Acompanhamento contínuo"],
-    ctaLabel: "Negociar",
-    ctaHref: "#contato",
-  },
-];
-
 export type FAQItem = {
   id: string;
   question: string;
