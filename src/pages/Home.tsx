@@ -15,8 +15,8 @@ const checkoutHref = "#contato";
 const supportHref = "#contato";
 const whatsappHref = "#contato";
 const contactEmail = "contato@seudominio.com";
-const vslSrc: string | undefined = undefined;
-const vslPoster: string | undefined = undefined;
+const vslSrc = "/vsl.mp4";
+const vslPoster = "/vsl-poster.jpg";
 
 export default function Home() {
   useRevealOnScroll();
