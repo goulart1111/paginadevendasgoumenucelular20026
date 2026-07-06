@@ -10,6 +10,8 @@ const includes = [
   "Atualizações quando necessário",
 ];
 
+const checkoutUrl = "https://www.goupay.com.br/checkout/a4e645e0-e86a-4e4b-89f0-e8682a851a46";
+
 export default function PricingSection() {
   return (
     <section id="precos" className="relative">
@@ -69,7 +71,7 @@ export default function PricingSection() {
             </div>
 
             <div className="mt-8">
-              <ButtonLink href="#contato" target="_blank" rel="noreferrer" className="w-full justify-center text-base">
+              <ButtonLink href={checkoutUrl} target="_blank" rel="noreferrer" className="w-full justify-center text-base">
                 Quero garantir por R$ 29,90
               </ButtonLink>
             </div>

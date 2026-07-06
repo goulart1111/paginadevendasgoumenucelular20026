@@ -10,6 +10,8 @@ type HeroSectionProps = {
 };
 
 export default function HeroSection({ checkoutHref, supportHref, videoSrc, videoPoster }: HeroSectionProps) {
+  const checkoutExternal = /^https?:\/\//i.test(checkoutHref);
+
   return (
     <section id="top" className="relative overflow-hidden">
       <div className="absolute inset-x-0 top-[-240px] mx-auto h-[520px] w-[860px] max-w-[120vw] rounded-full bg-cyan-400/10 blur-3xl md:top-[-280px]" />
@@ -38,7 +40,11 @@ export default function HeroSection({ checkoutHref, supportHref, videoSrc, video
             </p>
 
             <div data-reveal className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <ButtonLink href={checkoutHref} target="_blank" rel="noreferrer">
+              <ButtonLink
+                href={checkoutHref}
+                target={checkoutExternal ? "_blank" : undefined}
+                rel={checkoutExternal ? "noreferrer" : undefined}
+              >
                 Comprar agora <ArrowRight className="h-4 w-4" />
               </ButtonLink>
               <ButtonLink href={supportHref} target="_blank" rel="noreferrer" variant="secondary">
