@@ -23,6 +23,7 @@ export default function VideoPlayer({ src, poster, title, className }: VideoPlay
   const [isReady, setIsReady] = useState(false);
   const [hasError, setHasError] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [controlsVisible, setControlsVisible] = useState(true);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
   const [muted, setMuted] = useState(false);
@@ -40,8 +41,14 @@ export default function VideoPlayer({ src, poster, title, className }: VideoPlay
 
     const onLoadedMetadata = () => setDuration(video.duration || 0);
     const onTimeUpdate = () => setCurrentTime(video.currentTime || 0);
-    const onPlay = () => setIsPlaying(true);
-    const onPause = () => setIsPlaying(false);
+    const onPlay = () => {
+      setIsPlaying(true);
+      setControlsVisible(false);
+    };
+    const onPause = () => {
+      setIsPlaying(false);
+      setControlsVisible(true);
+    };
     const onCanPlay = () => setIsReady(true);
     const onError = () => setHasError(true);
 
@@ -94,6 +101,14 @@ export default function VideoPlayer({ src, poster, title, className }: VideoPlay
     }
   };
 
+  const onVideoTap = async () => {
+    if (isPlaying) {
+      setControlsVisible(visible => !visible);
+      return;
+    }
+    await togglePlay();
+  };
+
   const toggleFullscreen = async () => {
     const root = rootRef.current;
     if (!root) return;
@@ -137,20 +152,25 @@ export default function VideoPlayer({ src, poster, title, className }: VideoPlay
           type="button"
           aria-label={isPlaying ? "Pausar vídeo" : "Reproduzir vídeo"}
           className={cn(
-            "absolute inset-0 grid place-items-center transition",
-            isPlaying ? "opacity-0 group-hover:opacity-100" : "opacity-100",
+            "absolute inset-0 z-10 grid place-items-center transition",
+            isPlaying && !controlsVisible ? "opacity-0" : "opacity-100",
           )}
-          onClick={togglePlay}
+          onClick={onVideoTap}
         >
-          <span className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-white/10 ring-1 ring-white/20 backdrop-blur transition hover:bg-white/15">
+          <span
+            className={cn(
+              "inline-flex h-16 w-16 items-center justify-center rounded-full bg-white/10 ring-1 ring-white/20 backdrop-blur transition hover:bg-white/15",
+              isPlaying && !controlsVisible ? "pointer-events-none" : "",
+            )}
+          >
             {isPlaying ? <Pause className="h-7 w-7 text-white" /> : <Play className="h-7 w-7 text-white" />}
           </span>
         </button>
 
         <div
           className={cn(
-            "absolute inset-x-0 bottom-0 px-4 pb-4 pt-3 transition",
-            isPlaying ? "opacity-0 group-hover:opacity-100" : "opacity-100",
+            "absolute inset-x-0 bottom-0 z-20 px-4 pb-4 pt-3 transition",
+            isPlaying && !controlsVisible ? "pointer-events-none opacity-0" : "opacity-100",
           )}
         >
           <div className="glass rounded-3xl px-4 py-3">
