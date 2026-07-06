@@ -1,15 +1,13 @@
-import { Mail, MessageCircle, ShoppingCart } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 import { ButtonLink } from "@/components/Button";
 
 type ContactSectionProps = {
-  checkoutHref: string;
   supportHref: string;
   whatsappHref: string;
   email: string;
 };
 
-export default function ContactSection({ checkoutHref, supportHref, whatsappHref, email }: ContactSectionProps) {
-  const checkoutExternal = /^https?:\/\//i.test(checkoutHref);
+export default function ContactSection({ supportHref, whatsappHref, email }: ContactSectionProps) {
   const supportExternal = /^https?:\/\//i.test(supportHref);
   const whatsappExternal = /^https?:\/\//i.test(whatsappHref);
 
@@ -27,25 +25,17 @@ export default function ContactSection({ checkoutHref, supportHref, whatsappHref
               data-reveal
               className="mt-4 font-display text-2xl font-semibold tracking-tight text-white md:text-3xl"
             >
-              Compra direta ou validação no suporte. Você escolhe o caminho.
+              Chama no suporte e pega o acesso.
             </h2>
             <p data-reveal className="mt-4 max-w-2xl text-sm leading-relaxed text-white/70 md:text-base">
-              Se quiser confirmar compatibilidade e tirar dúvidas, chama no suporte antes. Se já decidiu, vai direto pro checkout.
+              Tem dúvida, quer o setup ou quer garantir o valor atual? Entra pelo Discord ou chama direto no WhatsApp.
             </p>
 
             <div data-reveal className="mt-8 flex flex-col gap-3 sm:flex-row">
               <ButtonLink
-                href={checkoutHref}
-                target={checkoutExternal ? "_blank" : undefined}
-                rel={checkoutExternal ? "noreferrer" : undefined}
-              >
-                Comprar agora <ShoppingCart className="h-4 w-4" />
-              </ButtonLink>
-              <ButtonLink
                 href={supportHref}
                 target={supportExternal ? "_blank" : undefined}
                 rel={supportExternal ? "noreferrer" : undefined}
-                variant="secondary"
               >
                 Discord / Suporte <MessageCircle className="h-4 w-4" />
               </ButtonLink>
@@ -59,19 +49,27 @@ export default function ContactSection({ checkoutHref, supportHref, whatsappHref
               </ButtonLink>
             </div>
 
-            <div data-reveal className="mt-8 grid gap-3 md:grid-cols-2">
+            <div data-reveal className="mt-8 grid gap-3 md:grid-cols-3">
+              <div className="glass rounded-3xl p-5">
+                <div className="flex items-center gap-2 font-display text-sm font-semibold text-white">
+                  <MessageCircle className="h-4 w-4 text-cyan-100/90" />
+                  Discord
+                </div>
+                <div className="mt-2 break-all text-sm text-white/70">discord.gg/gourp</div>
+              </div>
+              <div className="glass rounded-3xl p-5">
+                <div className="flex items-center gap-2 font-display text-sm font-semibold text-white">
+                  <MessageCircle className="h-4 w-4 text-cyan-100/90" />
+                  WhatsApp
+                </div>
+                <div className="mt-2 text-sm text-white/70">(32) 99828-4648</div>
+              </div>
               <div className="glass rounded-3xl p-5">
                 <div className="flex items-center gap-2 font-display text-sm font-semibold text-white">
                   <Mail className="h-4 w-4 text-cyan-100/90" />
                   E-mail
                 </div>
-                <div className="mt-2 text-sm text-white/70">{email}</div>
-                <div className="mt-1 text-xs text-white/45">Use para assuntos formais e solicitações de privacidade.</div>
-              </div>
-              <div className="glass rounded-3xl p-5">
-                <div className="font-display text-sm font-semibold text-white">Suporte</div>
-                <div className="mt-2 text-sm text-white/70">Setup guiado + resolução de dúvidas</div>
-                <div className="mt-1 text-xs text-white/45">Resposta pode variar por fila e horário.</div>
+                <div className="mt-2 break-all text-sm text-white/70">{email}</div>
               </div>
             </div>
           </div>

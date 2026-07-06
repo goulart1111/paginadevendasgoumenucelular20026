@@ -66,44 +66,6 @@ export const howSteps: HowStep[] = [
   { id: "refine", title: "Ajusta e salva", description: "Configura presets e atalhos para acelerar ações do dia a dia." },
 ];
 
-export type FAQItem = {
-  id: string;
-  question: string;
-  answer: string;
-};
-
-export const faqItems: FAQItem[] = [
-  {
-    id: "what",
-    question: "O que exatamente é esse remote control?",
-    answer:
-      "É um método que permite você controlar o menu do FiveM pelo celular. A ideia é tirar o peso de ficar alternando janela/tecla e deixar o fluxo mais rápido.",
-  },
-  {
-    id: "setup",
-    question: "É difícil de configurar?",
-    answer:
-      "Não. O setup é guiado e pensado para ser direto. Se surgir qualquer travamento, você chama no suporte e a gente ajusta junto.",
-  },
-  {
-    id: "risk",
-    question: "Tem risco de ban?",
-    answer:
-      "Qualquer uso de menu pode envolver riscos, dependendo do servidor, regras e comportamento do anticheat. A landing page existe para te orientar e reduzir o uso incorreto, mas não existe risco zero.",
-  },
-  {
-    id: "mobile",
-    question: "Funciona em Android e iOS?",
-    answer: "A compatibilidade pode variar por versão. Fala no suporte e a gente confirma com seu modelo/versão antes da compra.",
-  },
-  {
-    id: "support",
-    question: "Como funciona o suporte e updates?",
-    answer:
-      "Você recebe um canal de suporte para setup e dúvidas. Updates dependem de mudanças do FiveM e do próprio método, mas a ideia é manter sempre operacional.",
-  },
-];
-
 export type Testimonial = {
   id: string;
   name: string;

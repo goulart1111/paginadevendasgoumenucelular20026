@@ -16,18 +16,18 @@ export default function SiteFooter({ supportHref, checkoutHref }: SiteFooterProp
           <div>
             <div className="font-display text-sm font-semibold tracking-wide text-white">Remote Control FiveM</div>
             <p className="mt-3 text-sm leading-relaxed text-white/60">
-              Uma landing page focada em clareza, confiança e uma experiência visual que prende o olhar.
+              Uma página direta, visual e feita para mostrar o método sem enrolação.
             </p>
           </div>
 
           <div className="grid grid-cols-2 gap-8">
             <div className="space-y-3 text-sm">
               <div className="font-display text-xs tracking-[0.22em] text-white/60">LINKS</div>
+              <a className="block text-white/70 hover:text-white" href="#beneficios">
+                Benefícios
+              </a>
               <a className="block text-white/70 hover:text-white" href="#precos">
                 Preços
-              </a>
-              <a className="block text-white/70 hover:text-white" href="#faq">
-                FAQ
               </a>
               <a className="block text-white/70 hover:text-white" href="#contato">
                 Contato
