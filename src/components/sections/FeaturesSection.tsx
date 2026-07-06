@@ -7,11 +7,7 @@ export default function FeaturesSection() {
     <section id="beneficios" className="relative border-y border-white/10">
       <div className="container px-6 py-16 md:py-24">
         <div data-reveal>
-          <SectionHeading
-            eyebrow="BENEFÍCIOS"
-            title="Uma experiência que parece produto — não improviso"
-            description="A ideia é simples: reduzir fricção e deixar o controle do menu confortável no celular, com um visual premium-tech."
-          />
+          <SectionHeading eyebrow="BENEFÍCIOS" title="Um método melhor que esses xits por aí" />
         </div>
 
         <div className="mt-12 grid gap-4 md:mt-14 md:grid-cols-2 lg:grid-cols-3">
@@ -42,4 +38,3 @@ export default function FeaturesSection() {
     </section>
   );
 }
-
