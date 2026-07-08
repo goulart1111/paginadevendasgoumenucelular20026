@@ -1,4 +1,4 @@
-import { ArrowRight, ShieldCheck, Zap } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import { ButtonLink } from "@/components/Button";
 import VideoPlayer from "@/components/VideoPlayer";
 
@@ -50,27 +50,6 @@ export default function HeroSection({ checkoutHref, supportHref, videoSrc, video
               <ButtonLink href={supportHref} target="_blank" rel="noreferrer" variant="secondary">
                 Tirar dúvidas no suporte
               </ButtonLink>
-            </div>
-
-            <div data-reveal className="mt-9 grid gap-3 sm:grid-cols-2">
-              <div className="glass rounded-3xl px-5 py-4">
-                <div className="flex items-center gap-2 text-sm font-medium text-white/90">
-                  <Zap className="h-4 w-4 text-cyan-200/90" />
-                  Resposta rápida
-                </div>
-                <div className="mt-2 text-xs leading-relaxed text-white/60">
-                  UI com feedback visual e ações em sequência, feita para gameplay sem enrolação.
-                </div>
-              </div>
-              <div className="glass rounded-3xl px-5 py-4">
-                <div className="flex items-center gap-2 text-sm font-medium text-white/90">
-                  <ShieldCheck className="h-4 w-4 text-cyan-200/90" />
-                  Setup guiado
-                </div>
-                <div className="mt-2 text-xs leading-relaxed text-white/60">
-                  Passo a passo claro + suporte para você colocar tudo pra rodar no PC e no celular.
-                </div>
-              </div>
             </div>
           </div>
 
